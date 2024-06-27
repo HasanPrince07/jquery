@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- jquery cdn link -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        // $(document).ready(function(){}) -> it runs jquery after document is ready
+        $(document).ready(function () {
+            $("#click").click(function () {
+                $("#fade").html("click event call");
+            });
+            $("#dblclick").dblclick(function () {
+                $("#fade").html("dblclick event call");
+            });
+            $("#mouseenter").mouseenter(function () {
+                $("#fade").html("mouseenter event call");
+            });
+            $("#mouseleave").mouseleave(function () {
+                $("#fade").html("mouseleave event call");
+            });
+            $("#keypress").keypress(function () {
+                $("#fade").html("keypress event call");
+            });
+            $("#keydown").keydown(function () {
+                $("#fade").html("keydown event call");
+            });
+            $("#keyup").keyup(function () {
+                $("#fade").html("keyup event call");
+            });
+
+            $("#multiple_event").on({
+                click: function () {
+                    $("#multiple_event").html("click multi event call");
+                },
+                mouseenter: function () {
+                    $("#multiple_event").html("mouseenter multi event call");
+                },
+                mouseleave: function () {
+                    $("#multiple_event").html("mouseleave multi event call");
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <p id="fade">events</p>
+    <button id="click">click to event</button>
+    <button id="dblclick">dblclick to event</button>
+    <button id="mouseenter">mouseenter to event</button>
+    <button id="mouseleave">mouseleave to event</button>
+    <button id="keypress">keypress to event</button>
+    <button id="keydown">keydown to event</button>
+    <button id="keyup">keyup to event</button>
+    <h2 id="multiple_event">multiple event</h2>
+</body>
+
+</html>

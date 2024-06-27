@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- jquery cdn link -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#animation_btn").click(function () {
+                $("#animate_div").animate({
+                    marginLeft: "500px",
+                    marginTop: "100px",
+                }, 3000);
+            });
+        });
+    </script>
+    <style>
+        #animate_div {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="animation_btn">click to animate element</button>
+    <div id="animate_div"></div>
+</body>
+
+</html>

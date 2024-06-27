@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- jquery cdn link -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#text_btn").click(function () {
+                $("#p_text").text("this is a <strong>strong</strong> text.");
+            });
+            $("#html_btn").click(function () {
+                $("#p_text").html("this is a <strong>strong</strong> text.");
+            });
+            $("#val_btn").click(function () {
+                $("#input_text").val("this is a input value");
+            });
+            $("#attr_btn").click(function () {
+                $("img").attr("alt","image not found");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <button id="text_btn">click to text method</button>
+    <button id="html_btn">click to html method</button>
+    <button id="val_btn">click to val method</button>
+    <button id="attr_btn">click to attr method</button>
+    <p id="p_text"></p>
+    <input type="text" id="input_text">
+    <img alt="...">
+</body>
+
+</html>

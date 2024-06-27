@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- jquery cdn link -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#width_btn").click(function () {
+                var width = $("div").width();
+                alert(width);
+            });
+            $("#height_btn").click(function () {
+                var height = $("div").height();
+                alert(height);
+            });
+            $("#innerwidth_btn").click(function () {
+                var innerwidth = $("div").innerWidth();
+                alert(innerwidth);
+            });
+            $("#innerheight_btn").click(function () {
+                var innerheight = $("div").innerHeight();
+                alert(innerheight);
+            });
+            $("#outerwidth_btn").click(function () {
+                var outerwidth = $("div").outerWidth();
+                alert(outerwidth);
+            });
+            $("#outerheight_btn").click(function () {
+                var outerheight = $("div").outerHeight();
+                alert(outerheight);
+            });
+            $("#outerwidth_btn2").click(function () {
+                var outerwidth2 = $("div").outerWidth(true);
+                alert(outerwidth2);
+            });
+            $("#outerheight_btn2").click(function () {
+                var outerheight2 = $("div").outerHeight(true);
+                alert(outerheight2);
+            });
+            $("#setwidth_btn").click(function () {
+                var setwidth_btn = $("div").width("200px");
+            });
+        });
+    </script>
+    <style>
+        div {
+            width: 500px;
+            height: 300px;
+            background-color: red;
+            padding: 10px;
+            margin: 5px;
+            border: 2px solid blue;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="width_btn">click to width method</button>
+    <button id="height_btn">click to height method</button>
+    <button id="innerwidth_btn">click to inner_width method</button>
+    <button id="innerheight_btn">click to inner_height method</button>
+    <button id="outerwidth_btn">click to outer_width method</button>
+    <button id="outerheight_btn">click to outer_height method</button>
+    <button id="outerwidth_btn2">click to outer_width2 method</button>
+    <button id="outerheight_btn2">click to outer_height2 method</button>
+    <button id="setwidth_btn">click to set width and height method</button>
+    <div></div>
+</body>
+
+</html>

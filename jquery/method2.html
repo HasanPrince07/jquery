@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- jquery cdn link -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#fade_out").click(function () {
+                $("#fade").fadeOut(1000);
+            });
+            $("#fade_in").click(function () {
+                $("#fade").fadeIn("slow");
+            });
+            $("#fade_toggle").click(function () {
+                $("#fade").fadeToggle();
+            });
+            $("#fade_to").click(function () {
+                $("#fade").fadeTo("slow",0.5);
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <p id="fade">fade method</p>
+    <button id="fade_out">click to hide element</button>
+    <button id="fade_in">click to show element</button>
+    <button id="fade_toggle">click to toggle element</button>
+    <button id="fade_to">click to fade element</button>
+</body>
+
+</html>

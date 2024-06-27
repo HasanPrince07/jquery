@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- jquery cdn link -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#remove_btn").click(function () {
+                $("p").remove("#text_two");
+            });
+            $("#empty_btn").click(function () {
+                $("div").empty();
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <button id="remove_btn">click to remove method</button>
+    <button id="empty_btn">click to empty method</button>
+    <div style="background-color: red;width: 100px;height: 100px;">
+        <p>it is a text one.</p>
+        <p id="text_two">it is a text two.</p>
+    </div>
+</body>
+
+</html>

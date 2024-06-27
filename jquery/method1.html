@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- jquery cdn link -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        // $(document).ready(function(){}) -> it runs jquery after document is ready
+        $(document).ready(function () {
+            $("#hide_btn").click(function () {
+                $("#hide").hide(1000) // hide element
+            });
+            $("#show_btn").click(function () {
+                $("#hide").show("slow") // show element
+            });
+            $("#toggle_btn").click(function () {
+                $("#hide").toggle() // toggle element
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <p id="hide">hide/show/toggle method</p>
+    <button id="hide_btn">click to hide element</button>
+    <button id="show_btn">click to show element</button>
+    <button id="toggle_btn">click to toggle element</button>
+</body>
+
+</html>

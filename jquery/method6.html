@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- jquery cdn link -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        // $(document).ready(function(){}) -> it runs jquery after document is ready
+        $(document).ready(function () {
+            $("#text_btn").click(function () {
+                var p_text = $("#p_text").text();
+                alert(p_text);
+            });
+            $("#html_btn").click(function () {
+                var p_text = $("#p_text").html();
+                alert(p_text);
+            });
+            $("#val_btn").click(function () {
+                var input_text = $("#input_text").val();
+                alert(input_text);
+            });
+            $("#attr_btn").click(function () {
+                var input_text = $("#p_text").attr("id");
+                alert(input_text);
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <button id="text_btn">click to text method</button>
+    <button id="html_btn">click to html method</button>
+    <button id="val_btn">click to val method</button>
+    <button id="attr_btn">click to attr method</button>
+    <p id="p_text">this is a <strong>strong</strong> text.</p>
+    <input type="text" id="input_text">
+</body>
+
+</html>

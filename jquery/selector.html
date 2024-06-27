@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- jquery cdn link -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        // $(document).ready(function(){}) -> it runs jquery after document is ready
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("h2").hide(); // element selector
+                $("#id_selector").hide(); // id selector
+                $(".class_selector").hide(); // class selector
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <h2>element selector</h2>
+    <p id="id_selector">id selector</p>
+    <p class="class_selector">class selector</p>
+    <button>click to hide selectors</button>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- jquery cdn link -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#addclass_btn").click(function () {
+                $("p,h5").addClass("bg_blue text_red");
+            });
+            $("#removeclass_btn").click(function () {
+                $("p,h5").removeClass("bg_blue text_red");
+            });
+            $("#toggleclass_btn").click(function () {
+                $("p,h5").toggleClass("bg_blue text_red");
+            });
+        });
+    </script>
+    <style>
+        .bg_blue {
+            background-color: blue;
+        }
+
+        .text_red {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="addclass_btn">click to addClass method</button>
+    <button id="removeclass_btn">click to removeClass method</button>
+    <button id="toggleclass_btn">click to toggleClass method</button>
+    <p>it is a add class text.</p>
+    <h5>it is a h5 text.</h5>
+</body>
+
+</html>

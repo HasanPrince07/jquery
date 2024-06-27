@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- jquery cdn link -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#slidedown").click(function () {
+                $("#slide_p").slideDown(1000);
+            });
+            $("#slideup").click(function () {
+                $("#slide_p").slideUp("slow");
+            });
+            $("#toggle").click(function () {
+                $("#slide_p").slideToggle();
+            });
+        });
+    </script>
+    <style>
+        p {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="slidedown">click to slide down element</button>
+    <button id="slideup">click to slide up element</button>
+    <button id="toggle">click to toggle element</button>
+    <p id="slide_p">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis reiciendis quasi magni
+        voluptate ratione, incidunt quo explicabo recusandae sed et similique nemo, esse, iure provident! Deserunt
+        temporibus exercitationem aspernatur velit beatae sequi vero eos nostrum aliquid sed necessitatibus ea magni at
+        soluta, laudantium aperiam alias! Eum quasi sapiente quas explicabo!</p>
+</body>
+
+</html>

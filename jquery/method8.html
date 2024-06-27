@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- jquery cdn link -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#append_btn").click(function () {
+                $("#text1").append("this is a <strong>strong</strong> append text.");
+            });
+            $("#prepend_btn").click(function () {
+                $("#text1").prepend("this is a <strong>strong</strong> prepend text.");
+            });
+            $("#before_btn").click(function () {
+                $("#text2").before("this is a before text.");
+            });
+            $("#after_btn").click(function () {
+                $("#text2").after("this is a after text.");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <button id="append_btn">click to append method</button>
+    <button id="prepend_btn">click to prepend method</button>
+    <button id="before_btn">click to before method</button>
+    <button id="after_btn">click to after method</button>
+    <img alt="..."/>
+    <p id="text1">it is a text one.</p>
+    <p id="text2">it is a text two.</p>
+</body>
+
+</html>

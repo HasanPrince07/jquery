@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- jquery cdn link -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#traversing_btn").click(function () {
+                $("#child_one").parent().css({ "backgroundColor": "red" });
+            });
+            $("#traversing_btn").click(function () {
+                $("#child_two").parents().css({ "border": "2px solid darkred" });
+            });
+            $("#traversing_btn").click(function () {
+                $("#parent_one").children().css({ "color": "blue" });
+            });
+            $("#traversing_btn").click(function () {
+                $("#parent_one").find("*").css({ "color": "orange" });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <button id="traversing_btn">click to animate element</button>
+    <div id="parent_one">
+        <p>it is a child element</p>
+        <ul>
+            <li id="child_one">ul element <span>one</span></li>
+            <li>ul element <span>two</span></li>
+        </ul>
+        <ol>
+            <li id="child_two">ol element <strong>one</strong></li>
+            <li>ol element <strong>two</strong></li>
+        </ol>
+    </div>
+</body>
+
+</html>
